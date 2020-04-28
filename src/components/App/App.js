@@ -29,11 +29,17 @@ let businesses = [
 
 //App component class
 class App extends React.Component {
+  //method to provide functionality to 'Lets go' button
+  searchYelp(term, location, sortBy){
+    //simulate searching Yelp app. will be updated in future edits
+    console.log(`Searching Yelp with ${term}, ${location} and ${sortBy}`);
+  }
+
   render() {
     return (
       <div className="App">
         <h1>ravenous</h1>
-          <SearchBar />
+          <SearchBar searchYelp={this.searchYelp}/>
           <BusinessList businesses={businesses}/>
       </div>
     );
